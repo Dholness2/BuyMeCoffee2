@@ -8,7 +8,7 @@ export default Ember.Controller.extend({
       });
     },
   cancel: function() {
-    console.log('cancled')
+    console.log('cancled');
 
     return true;
   }
