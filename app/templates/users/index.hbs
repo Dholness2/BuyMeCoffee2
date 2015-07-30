@@ -1,6 +1,10 @@
-<h1> Users</h1>
-<ul>
-  {{#each user in model}}
-   <p> {{user.firstName}} - {{user.lastName}} </p>
-   {{/each}}
-</ul>
+
+{{link-to "new" "index" class="icon-gauge"}}
+{{#each user in model}}
+  <li>
+     {{#link-to 'users.show' user}}
+        {{user.firstName}} {{user.lastName}}
+      {{/link-to}}
+  </li>
+{{/each}}
+

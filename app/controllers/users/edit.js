@@ -1,9 +1,9 @@
 import UsersBaseController from './base';
 
-export default Ember.Controller.extend({
+export default UsersBaseController.extend({
   actions: {
     cancel: function() {
-      this.transitionToRoute('users.index');
+      this.transitonToRoute('users.show', this.get('model'));
       return false;
     }
   }
